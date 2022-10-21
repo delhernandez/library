@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Library TableVC-->
+        <scene sceneID="KVb-JK-Uhz">
+            <objects>
+                <tableViewController restorationIdentifier="LibraryVC" storyboardIdentifier="LibraryVC" id="WB8-Q8-9R2" customClass="LibraryTableVC" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KKu-8r-B3e">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BookCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCell" id="lH2-vp-SSS" customClass="BookCell" customModule="Navigation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lH2-vp-SSS" id="uyY-G3-aeh">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elantris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-yr-Ldc">
+                                            <rect key="frame" x="20" y="10.999999999999998" width="350" height="21.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jZf-yr-Ldc" secondAttribute="trailing" id="Csm-L6-h3J"/>
+                                        <constraint firstItem="jZf-yr-Ldc" firstAttribute="top" secondItem="uyY-G3-aeh" secondAttribute="topMargin" id="XKK-Fw-p1m"/>
+                                        <constraint firstItem="jZf-yr-Ldc" firstAttribute="leading" secondItem="uyY-G3-aeh" secondAttribute="leadingMargin" id="bfU-kc-UDh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jZf-yr-Ldc" secondAttribute="bottom" id="kSr-C9-6bj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookTitle" destination="jZf-yr-Ldc" id="IHQ-O9-Aqz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WB8-Q8-9R2" id="ddx-Y9-404"/>
+                            <outlet property="delegate" destination="WB8-Q8-9R2" id="R8B-cF-lOl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztq-ih-2Gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="43"/>
+        </scene>
+        <!--Book DetailVC-->
+        <scene sceneID="UI8-vX-4eM">
+            <objects>
+                <viewController restorationIdentifier="BookDetailVC" storyboardIdentifier="BookDetailVC" id="AHX-Ue-QhJ" customClass="BookDetailVC" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o6D-yK-KMS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jrx-bI-BOQ">
+                                <rect key="frame" x="10" y="57" width="370" height="682"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-ZC-Gph">
+                                <rect key="frame" x="10" y="759" width="370" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ihj-vN-qvx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kA3-ZC-Gph" firstAttribute="top" secondItem="jrx-bI-BOQ" secondAttribute="bottom" constant="20" id="8rQ-VC-zZp"/>
+                            <constraint firstItem="jrx-bI-BOQ" firstAttribute="top" secondItem="ihj-vN-qvx" secondAttribute="top" constant="10" id="Elm-ki-zk4"/>
+                            <constraint firstItem="ihj-vN-qvx" firstAttribute="trailing" secondItem="jrx-bI-BOQ" secondAttribute="trailing" constant="10" id="KPA-hR-VJS"/>
+                            <constraint firstItem="kA3-ZC-Gph" firstAttribute="leading" secondItem="ihj-vN-qvx" secondAttribute="leading" constant="10" id="UzX-be-GM4"/>
+                            <constraint firstItem="jrx-bI-BOQ" firstAttribute="leading" secondItem="ihj-vN-qvx" secondAttribute="leading" constant="10" id="a8c-yu-BZ8"/>
+                            <constraint firstItem="ihj-vN-qvx" firstAttribute="bottom" secondItem="kA3-ZC-Gph" secondAttribute="bottom" constant="10" id="dEF-bs-K6Y"/>
+                            <constraint firstItem="ihj-vN-qvx" firstAttribute="trailing" secondItem="kA3-ZC-Gph" secondAttribute="trailing" constant="10" id="yYF-Ra-vqT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookImage" destination="jrx-bI-BOQ" id="Ebo-f9-gXR"/>
+                        <outlet property="bookTitle" destination="kA3-ZC-Gph" id="Sdb-Nq-kcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6PF-K3-ivK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="43"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
